@@ -1,37 +1,84 @@
 const body = document.querySelector("body");
 const startButton = document.createElement("button");
-startButton.innerHTML = "tapToStart";
+startButton.innerHTML = "اضغط لبدء الاختبار";
 startButton.id = "startButton";
 body.append(startButton);
 const op = document.createElement("input");
 
-const qustionBank = [" ما هو اطول نهر بالعالم", "ما هو  ", "uioiuuuiل", 'av']
+const qustionBank = ["ما هي اطول سورة بالقراّن؟", "عدد الأيام التي ظل فيها نبي الله إبراهيم وسط نيران النمرود؟", "أّذكر عدد سجدات التلاوة التي وردت في القرآن؟", "سورة قرآنية ورد فيها سجدتين ما هو اسم السورة؟",
+    "ما هو اسم امرأة العزيز ؟ ", "ما هو اليوم الذي خُلق فيه سيدنا آدم ـ عليه السلام ؟ ", "ما هي أول صلاة أداها سيدنا محمد؟", "من هو شيخ المرسلين؟", "من هو أول من استشهد في الإسلام؟", "من هو خازن الجنة ؟"]
 const option = [{
-    option1: "ahmad",
-    option2: "النا",
-    option3: "الجليايا",
-    option4: "البشسي"
+    option1: "سورة النساء",
+    option2: "سورة البقرة",
+    option3: "سورة اّل عمران",
+    option4: "سورة الكهف"
 },
 {
-    option1: "الموكلا",
-    option2: "mahmoud",
-    option3: "mohamad",
-    option4: "abd"
+    option1: "اسبوع كامل",
+    option2: "شهر كامل",
+    option3: "خمسة ايام",
+    option4: "ثلاثة ايام"
 },
 {
-    option1: "ahmad",
-    option2: "mahmoud",
-    option3: "عبود",
-    option4: "abd"
+    option1: "خمسة سجدات",
+    option2: "عشرون سجدة",
+    option3: "خمسة عشر سجدة",
+    option4: "ثلاثون سجدة"
 },
 {
-    option1: "ahmad",
-    option2: "mahmoud",
-    option3: "no one",
-    option4: "abood",
-}
+    option1: "سورة الحج",
+    option2: "سورة السجدة",
+    option3: "سورة الانفال",
+    option4: "سورة الحجرات",
+},
+{
+    option1: "سمية",
+    option2: "حفصة",
+    option3: "زليخة",
+    option4: "خديجة"
+},
+{
+    option1: "يوم الخميس",
+    option2: "يوم الجمعة",
+    option3: "يوم السبت",
+    option4: "يوم الاحد"
+},
+{
+    option1: "صلاة العشاء",
+    option2: "صلاة الاستسقاء",
+    option3: "صلاة العيد",
+    option4: "صلاة الظهر"
+},
+{
+    option1: "سيدنا نوح",
+    option2: "عمر بن الخطاب",
+    option3: "عثمان بن عفان",
+    option4: "سيدنا ابراهيم",
+},
+{
+    option1: "سيدنا نوح",
+    option2: "السيدة سمية من ال ياسر",
+    option3: "بلال بن رباح",
+    option4: "علي بن ابي طالب"
+},
+{
+    option1: "الفاتح",
+    option2: "الراضي",
+    option3: "مالك",
+    option4: "رضوان"
+},
+
 ];
-const answers = ['ahmad', 'abd', 'عبود', 'mahmoud'];
+const answers = ["سورة البقرة"
+    , "اسبوع كامل"
+    , "خمسة عشر سجدة"
+    , "سورة الحج"
+    , "زليخة"
+    , "يوم الجمعة"
+    , "صلاة الظهر"
+    , "سيدنا نوح"
+    , "السيدة سمية من ال ياسر"
+    , "رضوان"];
 let grade = 0;
 let qustion = document.createElement("h1");
 const all = document.createElement("div");
@@ -41,7 +88,7 @@ let cont = 0;
 let a = 0;
 const next = (array) => {
     startButton.remove()
-    all.innerHTML=""
+    all.innerHTML = ""
     qustion.innerHTML = qustionBank[cont];
     all.append(qustion);
     const op1 = document.createElement("input")
@@ -81,7 +128,8 @@ const next = (array) => {
     }
     if (qustionBank[cont] === undefined) {
         all.style.display = "none"
-        const finalGrade = document.createElement("h")
+        const finalGrade = document.createElement("h");
+        finalGrade.id = "finalGrade";
         finalGrade.innerHTML = "your grade is : " + grade + "/100";
         nextButton.remove()
 
@@ -108,6 +156,7 @@ const next = (array) => {
     nextButton.innerHTML = "NEXT"
     nextButton.onclick = next
     body.append(nextButton)
+
 
     cont++
 

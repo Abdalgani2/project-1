@@ -1,57 +1,81 @@
-
+body{
+  background-image: url(https://thumbs.dreamstime.com/z/blank-islamic-background-mosque-design-92752630.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
 #startButton{
-  margin-top: 25%;
-  margin-left: 50%;
-  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   padding: 15px 25px;
   font-size: 24px;
   cursor: pointer;
   text-align: center;
-  outline: none;
-  color:white;
-  background-color:black;
-  border-radius: 5px;
-  box-shadow: 0 3px #999;
+  color:gold;
+  background-color:rgb(9, 32, 107);
+  box-shadow: 0 3px rgb(153, 153, 153);
 }
 h1{
-    color: yellow;
-    margin-top:200px ;
-  background-color:black;
+  align-items: center;
+    color: gold;
+    margin: auto;
+    margin-top:260px ;
+  background-color:rgb(9, 32, 107);
   border-radius: 15px;
   box-shadow: 0 3px rgba(251, 255, 3, 0.582);
     text-align: center;
+    
+  width: 60%;
+  
+  
    
 }
 .button{
-  border-top: 1px solid rgb(8, 8, 8);
-  margin-right: 70px;
-  background-color:black; 
+  
+  margin-left: 17%;
+  background-color:rgb(9, 32, 107); 
   border: 1px solid white;
-  color: rgb(236, 240, 11);
+  color: gold;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
   font-size: 30px;
-  width: 60%;
-  display:inline-block ;
+  display: flex;
   box-shadow: 0 3px rgba(251, 255, 3, 0.582);
+  width: 20%;
+
    
 }
 
+#finalGrade{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  padding: 15px 25px;
+  font-size: 24px;
+  cursor: pointer;
+  text-align: center;
+  color:gold;
+  background-color:rgb(9, 32, 107);
+  box-shadow: 0 3px rgb(153, 153, 153);
+}
+
 #nxetButton{
+  margin-top: 10px;
+  margin-left: 46%;
+  background-color:rgb(9, 32, 107) ;
+  color: gold;
   position: absolute;
   padding: 16px 30px;
 }
 #radio{
-  
+margin-left: 17%;
+  margin-top: 10px;
   float: left;
-  margin-top: 25px;
-  margin-left: 20px;
- 
-  width: 14%;
-
-
-  
-  
     cursor: pointer;
 }

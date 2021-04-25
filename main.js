@@ -5,8 +5,16 @@ startButton.id = "startButton";
 body.append(startButton);
 const op = document.createElement("input");
 
-const qustionBank = ["ما هي اطول سورة بالقراّن؟", "عدد الأيام التي ظل فيها نبي الله إبراهيم وسط نيران النمرود؟", "أّذكر عدد سجدات التلاوة التي وردت في القرآن؟", "سورة قرآنية ورد فيها سجدتين ما هو اسم السورة؟",
-    "ما هو اسم امرأة العزيز ؟ ", "ما هو اليوم الذي خُلق فيه سيدنا آدم ـ عليه السلام ؟ ", "ما هي أول صلاة أداها سيدنا محمد؟", "من هو شيخ المرسلين؟", "من هو أول من استشهد في الإسلام؟", "من هو خازن الجنة ؟"]
+const qustionBank = ["ما هي اطول سورة بالقراّن؟",
+    "عدد الأيام التي ظل فيها نبي الله إبراهيم وسط نيران النمرود؟",
+    "أّذكر عدد سجدات التلاوة التي وردت في القرآن؟",
+    "سورة قرآنية ورد فيها سجدتين ما هو اسم السورة؟",
+    "ما هو اسم امرأة العزيز ؟ ",
+    "ما هو اليوم الذي خُلق فيه سيدنا آدم ـ عليه السلام ؟ "
+    , "ما هي أول صلاة أداها سيدنا محمد؟",
+    "من هو شيخ المرسلين؟",
+    "من هو أول من استشهد في الإسلام؟",
+    "من هو خازن الجنة ؟"]
 const option = [{
     option1: "سورة النساء",
     option2: "سورة البقرة",
@@ -109,41 +117,34 @@ const next = (array) => {
     op4.id = "radio";
     op1.onclick = () => {
         nextButton.name = option1.innerHTML;
-
+         nextButton.disabled=false;
     }
     op2.onclick = () => {
         nextButton.name = option2.innerHTML;
+        nextButton.disabled=false;
     }
     op3.onclick = () => {
         nextButton.name = option3.innerHTML;
+        nextButton.disabled=false;
     }
     op4.onclick = () => {
         nextButton.name = option4.innerHTML;
+        nextButton.disabled=false;
     }
-    console.log(nextButton.name);
+   
     if (nextButton.name == answers[cont - 1]) {
         console.log(nextButton.name);
         grade = grade + 10;
-        console.log(grade);
     }
     if (qustionBank[cont] === undefined) {
         all.style.display = "none"
         const finalGrade = document.createElement("h");
         finalGrade.id = "finalGrade";
-        finalGrade.innerHTML = "your grade is : " + grade + "/100";
+        finalGrade.innerHTML = "العلامة النهائية : " + grade + "/100";
         nextButton.remove()
-
-        console.log(finalGrade)
         body.append(finalGrade)
     }
-    // if(cont===){
-    //     nextButton.innerHTML = "finsh"
-    // nextButton.onclick = next
-    // body.append(nextButton)
-    // }
-    // qustion.innerHTML = qustionBank[cont];
-    // all.append(qustion);
-
+    
     option1.innerHTML = option[cont].option1;
     option2.innerHTML = option[cont].option2;
     option3.innerHTML = option[cont].option3;
@@ -153,9 +154,18 @@ const next = (array) => {
     all.append(op3, option3);
     all.append(op4, option4);
     body.append(all);
-    nextButton.innerHTML = "NEXT"
+    if(cont===9){
+        console.log("abood")
+        nextButton.innerHTML = "انهاء الاختبار"
+        nextButton.onclick = next
+        body.append(nextButton)
+    }
+    else{
+    nextButton.innerHTML = "التالي"
     nextButton.onclick = next
     body.append(nextButton)
+    nextButton.disabled=true
+       }
 
 
     cont++
@@ -178,20 +188,3 @@ option3.className = "button";
 const option4 = document.createElement("label");
 
 option4.className = "button";
-
-// const op1 = document.createElement("input")
-// op1.setAttribute("type", "radio")
-// op1.name = "option"
-// op1.id = "radio"
-// const op2 = document.createElement("input")
-// op2.name = "option"
-// op2.setAttribute("type", "radio")
-// op2.id = "radio"
-// const op3 = document.createElement("input")
-// op3.setAttribute("type", "radio")
-// op3.name = "option";
-// op3.id = "radio"
-// const op4 = document.createElement("input");
-// op4.setAttribute("type", "radio");
-// op4.name = "option"
-// op4.id = "radio"

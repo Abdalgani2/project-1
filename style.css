@@ -44,6 +44,7 @@ h1{
   display: flex;
   box-shadow: 0 3px rgba(251, 255, 3, 0.582);
   width: 15%;;
+  text-align: center;
    
 }
 
@@ -60,20 +61,17 @@ h1{
   background-color:rgb(9, 32, 107);
   
 }
-
 #nxetButton{
-  margin-top: 10px;
   margin-left: 46%;
   background-color:rgb(9, 32, 107) ;
   color: gold;
   position: absolute;
   padding: 16px 30px;
   cursor: pointer;
-  
 }
 #radio{
 margin-left: 17%;
-  margin-top: 40px;
-  float: left;
-    cursor: pointer;
+margin-top: 40px;
+float: left;
+cursor: pointer;
 }
